@@ -590,7 +590,7 @@ async function open(options: Options, url: string | undefined, language: string)
   await openPage(context, url);
 }
 
-async function codegen(options: Options & { target: string, output?: string, testIdAttribute?: string }, url: string | undefined) {
+export async function codegen(options: Options & { target: string, output?: string, testIdAttribute?: string }, url: string | undefined) {
   const { target: language, output: outputFile, testIdAttribute: testIdAttributeName } = options;
   const tracesDir = path.join(os.tmpdir(), `playwright-recorder-trace-${Date.now()}`);
   const { context, launchOptions, contextOptions } = await launchContext(options, {

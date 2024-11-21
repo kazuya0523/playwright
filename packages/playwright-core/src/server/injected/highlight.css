@@ -44,7 +44,7 @@ x-pw-tooltip {
 }
 
 x-pw-tooltip-line {
-  display: flex;
+  display: none;
   max-width: 600px;
   padding: 6px;
   user-select: none;
